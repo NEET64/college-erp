@@ -1,22 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Course</title>
-  </head>
-  <body>
-    <h1>Course Details:</h1>
-    <ul>
-      <li>Course Code: <%= course.code %></li>
-      <li>Course Name: <%= course.name %></li>
-      <li>Credits: <%= course.credit %></li>
-      <li>Teaching Scheme: <%= course["teachingScheme"] %></li>
-      <li>examination Scheme: <%= course["examinationScheme"] %></li>
-      <a href="/course/<%=course._id%>/edit">Edit</a>
-      <form action="/course/<%=course._id%>/?_method=DELETE" method="POST">
-        <button>Delete</button>
-      </form>
-    </ul>
-  </body>
-</html>
+<% layout("/layouts/boilerplate") %>
+<body>
+  <h1>Course Details:</h1>
+  <ul>
+    <li>Course Code: <%= course.code %></li>
+    <li>Course Name: <%= course.name %></li>
+    <li>Credits: <%= course.credit %></li>
+    <li>Teaching Scheme: <%= course["teachingScheme"] %></li>
+    <li>examination Scheme: <%= course["examinationScheme"] %></li>
+    <a href="/course/<%=course._id%>/edit">Edit</a>
+    <form action="/course/<%=course._id%>/?_method=DELETE" method="POST">
+      <button>Delete</button>
+    </form>
+  </ul>
+</body>

@@ -1,19 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>University ERP</title>
-  </head>
-  <body>
-    <h1>All Courses</h1>
-    <form action="/course/new" method="GET">
-      <button>New Course</button>
-    </form>
-    <ul>
-      <% for(let course of courses) { %>
-      <li><a href="/course/<%=course._id%>"><%= course.name %></a></li>
-      <% } %>
-    </ul>
-  </body>
-</html>
+<% layout("/layouts/boilerplate") %>
+<body>
+  <h1>All Courses</h1>
+  <form action="/course/new" method="GET">
+    <button>New Course</button>
+  </form>
+  <div class="courses">
+    <% for(let course of courses) { %>
+    <div class="card">
+      <div class="content">
+        <p class="heading"><%= course.code %></p>
+        <p class="para"><%= course.name %></p>
+        <a class="btn" href="/course/<%=course._id%>">Show</a>
+      </div>
+    </div>
+    <% } %>
+  </div>
+</body>

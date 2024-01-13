@@ -1,57 +1,50 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Course</title>
-  </head>
-  <body>
-    <form action="/course" method="Post">
-      <input name="course[code]" type="text" placeholder="Course Code" /><br />
-      <input name="course[name]" type="text" placeholder="Course Name" /><br />
-      <input
-        name="course[credit]"
-        type="text"
-        placeholder="Course Credit" /><br />
+<% layout("/layouts/boilerplate") %>
+<body>
+  <form action="/course" method="Post">
+    <input name="course[code]" type="text" placeholder="Course Code" /><br />
+    <input name="course[name]" type="text" placeholder="Course Name" /><br />
+    <input
+      name="course[credit]"
+      type="text"
+      placeholder="Course Credit" /><br />
 
-      <input
-        name="course[teachingScheme][theory]"
-        type="number"
-        placeholder="Theory Hours" /><br />
-      <input
-        name="course[teachingScheme][practical]"
-        type="number"
-        placeholder="Practical Hours" /><br />
-      <input
-        name="course[teachingScheme][tutorial]"
-        type="number"
-        placeholder="Tutorial Hours" /><br />
+    <input
+      name="course[teachingScheme][theory]"
+      type="number"
+      placeholder="Theory Hours" /><br />
+    <input
+      name="course[teachingScheme][practical]"
+      type="number"
+      placeholder="Practical Hours" /><br />
+    <input
+      name="course[teachingScheme][tutorial]"
+      type="number"
+      placeholder="Tutorial Hours" /><br />
 
-      <input
-        name="course[examinationScheme][theory][ce]"
-        type="number"
-        placeholder="Theory CE" /><br />
-      <input
-        name="course[examinationScheme][practical][ce]"
-        type="number"
-        placeholder="Practical CE" /><br />
-      <input
-        name="course[examinationScheme][tutorial][ce]"
-        type="number"
-        placeholder="Tutorial CE" /><br />
-      <input
-        name="course[examinationScheme][theory][ese]"
-        type="number"
-        placeholder="Theory ESE" /><br />
-      <input
-        name="course[examinationScheme][practical][ese]"
-        type="number"
-        placeholder="Practical ESE" /><br />
-      <input
-        name="course[examinationScheme][tutorial][ese]"
-        type="number"
-        placeholder="Tutorial ESE" /><br />
-      <button>Create Course</button>
-    </form>
-  </body>
-</html>
+    <input
+      name="course[examinationScheme][theory][ce]"
+      type="number"
+      placeholder="Theory CE" /><br />
+    <input
+      name="course[examinationScheme][practical][ce]"
+      type="number"
+      placeholder="Practical CE" /><br />
+    <input
+      name="course[examinationScheme][tutorial][ce]"
+      type="number"
+      placeholder="Tutorial CE" /><br />
+    <input
+      name="course[examinationScheme][theory][ese]"
+      type="number"
+      placeholder="Theory ESE" /><br />
+    <input
+      name="course[examinationScheme][practical][ese]"
+      type="number"
+      placeholder="Practical ESE" /><br />
+    <input
+      name="course[examinationScheme][tutorial][ese]"
+      type="number"
+      placeholder="Tutorial ESE" /><br />
+    <button>Create Course</button>
+  </form>
+</body>
