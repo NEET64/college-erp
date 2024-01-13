@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Course</title>
+  </head>
+  <body>
+    <form action="/course/<%=course._id%>?_method=PUT" method="Post">
+      <input name="course[code]" type="text" value="<%=course.code%>" /><br />
+      <input name="course[name]" type="text" value="<%=course.name%>" /><br />
+      <input
+        name="course[credit]"
+        type="text"
+        value="<%=course.credit%>" /><br />
+
+      <input
+        name="course[teachingScheme][theory]"
+        type="number"
+        value="<%=course.teachingScheme.theory%>" /><br />
+      <input
+        name="course[teachingScheme][practical]"
+        type="number"
+        value="<%=course.teachingScheme.practical%>" /><br />
+      <input
+        name="course[teachingScheme][tutorial]"
+        type="number"
+        value="<%=course.teachingScheme.tutorial%>" /><br />
+
+      <input
+        name="course[examinationScheme][theory][ce]"
+        type="number"
+        value="<%=course.examinationScheme.theory.ce%>" /><br />
+      <input
+        name="course[examinationScheme][practical][ce]"
+        type="number"
+        value="<%=course.examinationScheme.practical.ce%>" /><br />
+      <input
+        name="course[examinationScheme][tutorial][ce]"
+        type="number"
+        value="<%=course.examinationScheme.tutorial.ce%>" /><br />
+      <input
+        name="course[examinationScheme][theory][ese]"
+        type="number"
+        value="<%=course.examinationScheme.theory.ese%>" /><br />
+      <input
+        name="course[examinationScheme][practical][ese]"
+        type="number"
+        value="<%=course.examinationScheme.practical.ese%>" /><br />
+      <input
+        name="course[examinationScheme][tutorial][ese]"
+        type="number"
+        value="<%=course.examinationScheme.tutorial.ese%>" /><br />
+      <button>Create Course</button>
+    </form>
+  </body>
+</html>

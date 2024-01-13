@@ -1,7 +1,7 @@
 const sampleCourse = [
   {
-    courseCode: "SESH1070",
-    courseName: "Fundamentals of Mathematics",
+    code: "SESH1070",
+    name: "Fundamentals of Mathematics",
     teachingScheme: {
       theory: 2,
       practical: 0,
@@ -21,10 +21,11 @@ const sampleCourse = [
         ese: 0,
       },
     },
+    credit: 4,
   },
   {
-    courseCode: "SECV1040",
-    courseName: "Basics of Civil & Mechanical Engineering",
+    code: "SECV1040",
+    name: "Basics of Civil & Mechanical Engineering",
     teachingScheme: {
       theory: 4,
       practical: 2,
@@ -44,10 +45,11 @@ const sampleCourse = [
         ese: 0,
       },
     },
+    credit: 5,
   },
   {
-    courseCode: "SECE1050",
-    courseName: "Programming for Problem Solving",
+    code: "SECE1050",
+    name: "Programming for Problem Solving",
     teachingScheme: {
       theory: 3,
       practical: 4,
@@ -67,10 +69,11 @@ const sampleCourse = [
         ese: 0,
       },
     },
+    credit: 5,
   },
   {
-    courseCode: "SESH1240",
-    courseName: "Electrical& Electronics Workshop",
+    code: "SESH1240",
+    name: "Electrical& Electronics Workshop",
     teachingScheme: {
       theory: 0,
       practical: 2,
@@ -90,10 +93,11 @@ const sampleCourse = [
         ese: 0,
       },
     },
+    credit: 1,
   },
   {
-    courseCode: "SEHV1010",
-    courseName: "Universal Human Values-I",
+    code: "SEHV1010",
+    name: "Universal Human Values-I",
     teachingScheme: {
       theory: 2,
       practical: 0,
@@ -115,8 +119,8 @@ const sampleCourse = [
     },
   },
   {
-    courseCode: "SESH1080",
-    courseName: "Linear Algebra & Calculus",
+    code: "SESH1080",
+    name: "Linear Algebra & Calculus",
     teachingScheme: {
       theory: 3,
       practical: 0,
@@ -136,10 +140,11 @@ const sampleCourse = [
         ese: 0,
       },
     },
+    credit: 5,
   },
   {
-    courseCode: "SEIT1030",
-    courseName: "Object Oriented Programming with Java",
+    code: "SEIT1030",
+    name: "Object Oriented Programming with Java",
     teachingScheme: {
       theory: 3,
       practical: 4,
@@ -159,10 +164,11 @@ const sampleCourse = [
         ese: 0,
       },
     },
+    credit: 5,
   },
   {
-    courseCode: "SEIT1010",
-    courseName: "Introduction to Web Designing",
+    code: "SEIT1010",
+    name: "Introduction to Web Designing",
     teachingScheme: {
       theory: 0,
       practical: 2,
@@ -182,10 +188,11 @@ const sampleCourse = [
         ese: 0,
       },
     },
+    credit: 1,
   },
   {
-    courseCode: "SEME1020",
-    courseName: "Engineering Workshop",
+    code: "SEME1020",
+    name: "Engineering Workshop",
     teachingScheme: {
       theory: 0,
       practical: 2,
@@ -205,10 +212,11 @@ const sampleCourse = [
         ese: 0,
       },
     },
+    credit: 1,
   },
   {
-    courseCode: "SEME1040",
-    courseName: "Concepts of Engineering Drawing",
+    code: "SEME1040",
+    name: "Concepts of Engineering Drawing",
     teachingScheme: {
       theory: 2,
       practical: 2,
@@ -228,10 +236,11 @@ const sampleCourse = [
         ese: 0,
       },
     },
+    credit: 3,
   },
   {
-    courseCode: "SESH1210",
-    courseName: "Applied Physics",
+    code: "SESH1210",
+    name: "Applied Physics",
     teachingScheme: {
       theory: 3,
       practical: 2,
@@ -251,10 +260,11 @@ const sampleCourse = [
         ese: 0,
       },
     },
+    credit: 4,
   },
   {
-    courseCode: "CFLS1010",
-    courseName: "Linguistic Proficiency",
+    code: "CFLS1010",
+    name: "Linguistic Proficiency",
     teachingScheme: {
       theory: 2,
       practical: 0,
@@ -274,10 +284,11 @@ const sampleCourse = [
         ese: 0,
       },
     },
+    credit: 2,
   },
   {
-    courseCode: "SESH2040",
-    courseName: "Discrete Mathematics",
+    code: "SESH2040",
+    name: "Discrete Mathematics",
     teachingScheme: {
       theory: 3,
       practical: 0,
@@ -297,10 +308,11 @@ const sampleCourse = [
         ese: 0,
       },
     },
+    credit: 5,
   },
   {
-    courseCode: "SECE2111",
-    courseName: "Database Management System",
+    code: "SECE2111",
+    name: "Database Management System",
     teachingScheme: {
       theory: 3,
       practical: 2,
@@ -320,10 +332,11 @@ const sampleCourse = [
         ese: 0,
       },
     },
+    credit: 4,
   },
   {
-    courseCode: "SECE2021",
-    courseName: "Digital Workshop",
+    code: "SECE2021",
+    name: "Digital Workshop",
     teachingScheme: {
       theory: 0,
       practical: 2,
@@ -343,10 +356,11 @@ const sampleCourse = [
         ese: 0,
       },
     },
+    credit: 2,
   },
   {
-    courseCode: "SECE2031",
-    courseName: "Data Structures",
+    code: "SECE2031",
+    name: "Data Structures",
     teachingScheme: {
       theory: 3,
       practical: 2,
@@ -366,10 +380,11 @@ const sampleCourse = [
         ese: 0,
       },
     },
+    credit: 4,
   },
   {
-    courseCode: "SECE2120",
-    courseName: "Programming with Python",
+    code: "SECE2120",
+    name: "Programming with Python",
     teachingScheme: {
       theory: 3,
       practical: 2,
@@ -389,10 +404,11 @@ const sampleCourse = [
         ese: 0,
       },
     },
+    credit: 4,
   },
   {
-    courseCode: "SEIT2041",
-    courseName: "Mobile Application Development",
+    code: "SEIT2041",
+    name: "Mobile Application Development",
     teachingScheme: {
       theory: 2,
       practical: 4,
@@ -412,10 +428,11 @@ const sampleCourse = [
         ese: 0,
       },
     },
+    credit: 4,
   },
   {
-    courseCode: "CFLS1020",
-    courseName: "Global Communication Skills",
+    code: "CFLS1020",
+    name: "Global Communication Skills",
     teachingScheme: {
       theory: 2,
       practical: 0,
@@ -435,10 +452,11 @@ const sampleCourse = [
         ese: 0,
       },
     },
+    credit: 2,
   },
   {
-    courseCode: "SECE2910",
-    courseName: "Industrial Exposure",
+    code: "SECE2910",
+    name: "Industrial Exposure",
     teachingScheme: {
       theory: 0,
       practical: 0,
@@ -458,10 +476,11 @@ const sampleCourse = [
         ese: 0,
       },
     },
+    credit: 2,
   },
   {
-    courseCode: "SESH2051",
-    courseName: "Mathematical Methods for Computation",
+    code: "SESH2051",
+    name: "Mathematical Methods for Computation",
     teachingScheme: {
       theory: 3,
       practical: 0,
@@ -481,10 +500,11 @@ const sampleCourse = [
         ese: 0,
       },
     },
+    credit: 5,
   },
   {
-    courseCode: "SECE2040",
-    courseName: "Computer Organization",
+    code: "SECE2040",
+    name: "Computer Organization",
     teachingScheme: {
       theory: 3,
       practical: 2,
@@ -504,10 +524,11 @@ const sampleCourse = [
         ese: 0,
       },
     },
+    credit: 4,
   },
   {
-    courseCode: "SECE3011",
-    courseName: "Computer Network",
+    code: "SECE3011",
+    name: "Computer Network",
     teachingScheme: {
       theory: 3,
       practical: 2,
@@ -527,10 +548,11 @@ const sampleCourse = [
         ese: 0,
       },
     },
+    credit: 4,
   },
   {
-    courseCode: "SEIT2031",
-    courseName: "Operating System",
+    code: "SEIT2031",
+    name: "Operating System",
     teachingScheme: {
       theory: 3,
       practical: 2,
@@ -550,10 +572,11 @@ const sampleCourse = [
         ese: 0,
       },
     },
+    credit: 4,
   },
   {
-    courseCode: "SEIT3010",
-    courseName: "Software Engineering",
+    code: "SEIT3010",
+    name: "Software Engineering",
     teachingScheme: {
       theory: 3,
       practical: 0,
@@ -573,10 +596,11 @@ const sampleCourse = [
         ese: 0,
       },
     },
+    credit: 4,
   },
   {
-    courseCode: "CFLS3010",
-    courseName: "Foreign Language-I",
+    code: "CFLS3010",
+    name: "Foreign Language-I",
     teachingScheme: {
       theory: 2,
       practical: 0,
@@ -596,10 +620,11 @@ const sampleCourse = [
         ese: 0,
       },
     },
+    credit: 2,
   },
   {
-    courseCode: "SEPD3040",
-    courseName: "Integrated Personality Development Course-I",
+    code: "SEPD3040",
+    name: "Integrated Personality Development Course-I",
     teachingScheme: {
       theory: 2,
       practical: 0,
@@ -619,6 +644,7 @@ const sampleCourse = [
         ese: 0,
       },
     },
+    credit: 1,
   },
 ];
 

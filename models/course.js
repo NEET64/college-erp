@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const courseSchema = new Schema({
-  courseCode: {
+  code: {
     type: String,
     required: true,
     validate: {
@@ -13,7 +13,7 @@ const courseSchema = new Schema({
         `${props.value} is not a valid course code. It should be in the format 4 capital letters and 4 numbers`,
     },
   },
-  courseName: {
+  name: {
     type: String,
     required: true,
   },
@@ -27,6 +27,10 @@ const courseSchema = new Schema({
       default: 0,
     },
     tutorial: {
+      type: Number,
+      default: 0,
+    },
+    totalHours: {
       type: Number,
       default: 0,
     },
@@ -62,29 +66,46 @@ const courseSchema = new Schema({
         default: 0,
       },
     },
+    totalMarks: {
+      type: Number,
+      default: 0,
+    },
   },
   credit: {
     type: Number,
     default: 0,
   },
-  totalMarks: {
-    type: Number,
-    default: 0,
-  },
 });
 
+const calculateTotals = function (course) {
+  course.teachingScheme.totalHours =
+    course.teachingScheme.theory +
+    course.teachingScheme.practical +
+    course.teachingScheme.tutorial;
+
+  course.examinationScheme.totalMarks =
+    course.examinationScheme.theory.ce +
+    course.examinationScheme.practical.ce +
+    course.examinationScheme.tutorial.ce +
+    course.examinationScheme.theory.ese +
+    course.examinationScheme.practical.ese +
+    course.examinationScheme.tutorial.ese;
+};
+
 courseSchema.pre("save", function (next) {
-  this.credit =
-    this.teachingScheme.theory +
-    this.teachingScheme.practical +
-    this.teachingScheme.tutorial;
-  this.totalMarks =
-    this.examinationScheme.theory.ce +
-    this.examinationScheme.practical.ce +
-    this.examinationScheme.tutorial.ce +
-    this.examinationScheme.theory.ese +
-    this.examinationScheme.practical.ese +
-    this.examinationScheme.tutorial.ese;
+  calculateTotals(this);
+  next();
+});
+
+courseSchema.pre("findOneAndUpdate", function (next) {
+  calculateTotals(this._update);
+  next();
+});
+
+courseSchema.pre("insertMany", function (next, courses) {
+  for (const course of courses) {
+    calculateTotals(course);
+  }
   next();
 });
 
